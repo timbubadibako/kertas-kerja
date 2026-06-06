@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KertasKerja - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #F8FAFC; }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <nav class="h-20 bg-white border-b flex items-center justify-between px-12">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-indigo-100">K</div>
+            <h1 class="text-2xl font-extrabold text-slate-900 tracking-tight">Kertas<span class="text-indigo-600">Kerja</span></h1>
+        </div>
+        <div class="flex items-center gap-6">
+            <div class="flex items-center gap-3 pr-6 border-r">
+                <div class="text-right">
+                    <p class="text-xs font-bold text-indigo-600">PREMIUM USER</p>
+                    <p class="text-sm font-semibold text-slate-900">Syifa Pajril Yaum</p>
+                </div>
+                <div class="w-10 h-10 bg-slate-200 rounded-full overflow-hidden border-2 border-white shadow-sm">
+                    <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Pajril" alt="avatar">
+                </div>
+            </div>
+            <button class="text-slate-500 hover:text-rose-600 transition-colors font-semibold text-sm">Sign Out</button>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto py-12 px-6">
+        
+        <div class="flex items-center justify-between mb-10">
+            <div>
+                <h2 class="text-3xl font-bold text-slate-900">Daftar Kertas Lo</h2>
+                <p class="text-slate-500 mt-2">Kloning dan sesuaikan CV lo buat tiap loker biar HRD auto-lirik.</p>
+            </div>
+            <button class="bg-indigo-600 text-white px-6 py-3 rounded-2xl font-bold hover:bg-indigo-700 transition-all shadow-xl shadow-indigo-200 flex items-center gap-2">
+                <i data-lucide="plus" class="w-5 h-5"></i>
+                Bikin Versi Baru
+            </button>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- CV Card 1 -->
+            <div class="group bg-white rounded-[32px] p-8 border border-slate-100 hover:border-indigo-200 hover:shadow-2xl hover:shadow-indigo-100 transition-all cursor-pointer relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-32 h-32 bg-indigo-50 rounded-bl-[100px] -mr-16 -mt-16 group-hover:scale-110 transition-transform"></div>
+                <div class="relative z-10">
+                    <div class="w-12 h-12 bg-indigo-600 rounded-2xl flex items-center justify-center text-white mb-6 shadow-lg shadow-indigo-100">
+                        <i data-lucide="briefcase" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-1">Backend Intern</h3>
+                    <p class="text-sm text-slate-400 mb-6">Last edited 2 hours ago</p>
+                    
+                    <div class="flex items-center gap-2 mb-8">
+                        <span class="px-3 py-1 bg-emerald-50 text-emerald-600 text-[10px] font-bold rounded-full border border-emerald-100 uppercase">Score: 85</span>
+                        <span class="px-3 py-1 bg-indigo-50 text-indigo-600 text-[10px] font-bold rounded-full border border-indigo-100 uppercase">Classic ATS</span>
+                    </div>
+
+                    <div class="flex items-center gap-3">
+                        <button class="flex-1 bg-slate-900 text-white py-3 rounded-xl font-bold text-sm hover:bg-slate-800 transition-all">Edit Kertas</button>
+                        <button class="w-12 h-12 border border-slate-200 rounded-xl flex items-center justify-center text-slate-400 hover:bg-slate-50 hover:text-indigo-600 transition-all" title="Duplicate">
+                            <i data-lucide="copy" class="w-5 h-5"></i>
+                        </button>
+                        <button class="w-12 h-12 border border-slate-200 rounded-xl flex items-center justify-center text-slate-400 hover:bg-rose-50 hover:text-rose-600 transition-all" title="Delete">
+                            <i data-lucide="trash-2" class="w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CV Card 2 (Empty/New) -->
+            <div class="group bg-slate-50 rounded-[32px] p-8 border-2 border-dashed border-slate-200 hover:border-indigo-400 hover:bg-indigo-50 transition-all cursor-pointer flex flex-col items-center justify-center text-center gap-4">
+                <div class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-slate-300 group-hover:text-indigo-600 shadow-sm transition-all">
+                    <i data-lucide="plus" class="w-8 h-8"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-slate-400 group-hover:text-indigo-900">Tambah Versi Baru</h3>
+                    <p class="text-xs text-slate-400 mt-1 max-w-[150px]">Kloning dari yang udah ada atau bikin dari nol.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
